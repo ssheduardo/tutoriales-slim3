@@ -7,3 +7,8 @@
 		$logger->pushHandler(new Monolog\Handler\StreamHandler($settings['path'], Monolog\Logger::DEBUG));
 		return $logger;
 	};
+
+	$container['view'] = function ($c){
+		$settings = $c->get('settings')['renderer'];
+		return new \Slim\Views\PhpRenderer($settings['template_path']);
+	};
