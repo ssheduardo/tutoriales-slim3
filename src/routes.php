@@ -14,3 +14,5 @@ $app->get('/home/[{name}]', function($request, $response, $args){
 
 	return $this->view->render($response,'index.phtml', $args);
 });
+
+$app->get('/test','UserController:show')->setName('mt');
