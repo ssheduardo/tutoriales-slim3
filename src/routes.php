@@ -16,3 +16,4 @@ $app->get('/home/[{name}]', function($request, $response, $args){
 });
 
 $app->get('/test','UserController:show')->setName('mt');
+$app->get('/users','UserController:users')->setName('users');
