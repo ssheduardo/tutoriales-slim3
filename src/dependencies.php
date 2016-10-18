@@ -22,3 +22,7 @@
 	$container['UserController'] = function($c){
 		return new \App\Controllers\UserController($c);
 	};
+
+	$container['ExampleMiddleware'] = function($c){
+		return new App\Middlewares\ExampleMiddleware($c);
+	};
