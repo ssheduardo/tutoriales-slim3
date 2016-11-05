@@ -25,12 +25,6 @@
         </style>
 </head>
 <body>
-	<h1>Slim</h1>
-	<?php if (isset($name)) : ?>
-            <h2>Hello <?php echo htmlspecialchars($name); ?>!</h2>
-    <?php else: ?>
-        <p>Try <a href="http://www.slimframework.com">SlimFramework</a></p>
-        <?php echo $path ?>
-	<?php endif; ?>
+	@yield('content')
 </body>
 </html>
